@@ -1,0 +1,29 @@
+/* Aboutus.css */
+
+
+  
+.headers{
+    width: auto;
+    background-color:beige;
+    border-radius: 10px;
+    margin: 100px 150px;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.header-1 h3{
+    font-weight: 200;
+    
+}
+
+.para-1 p{
+    font-size: 15px;
+    color: black;
+    font-family:'Segoe UI';
+    position: relative;
+    left: 0%;
+}
+
+.header-1{
+    padding-bottom: 20px;
+}

@@ -1,0 +1,169 @@
+.home {
+  position: relative;
+  padding-top: 80px;
+  width: 100%;
+  height: 400px; /* Adjust banner height */
+  overflow: hidden;
+}
+
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  flex: 0 0 100%; /* Each banner will take 100% of the width, so only one banner is visible */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Position for the first banner content */
+.banner-contentONE {
+  left: 10%;
+  margin-top: 100px;
+}
+
+.banner-contentONE p {
+  position: relative;
+  left: 100px;
+  bottom: 60px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+/* Position for the second banner content */
+.banner-contentTWO {
+  right: 10%;
+}
+
+/* Header text */
+h1 {
+  font-size: 5rem;
+  padding: 10px;
+  color: white;
+}
+
+/* Description text */
+.banner-content p {
+  font-size: 1.25rem;
+  margin: 10px 0;
+}
+
+/* Styling for navigation dots */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .home {
+    height: 300px; /* Adjust height for smaller screens */
+    padding-top: 60px; /* Less padding for mobile */
+  }
+
+  .banner-wrapper {
+    height: 100%;
+  }
+
+  .banner-container {
+    height: 100%;
+  }
+
+  .banner {
+    height: 100%;
+    background-position: center;
+  }
+
+  /* Adjust font sizes for mobile */
+  .banner-contentONE h1 {
+    font-size: 3rem; /* Smaller font size on mobile */
+  }
+
+  .banner-contentONE p {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+    left: 50px; /* Slight left shift */
+    bottom: 40px; /* Adjust vertical position */
+  }
+
+  /* Position the second content appropriately */
+  .banner-contentTWO {
+    right: 5%;
+  }
+
+  /* Header text on mobile */
+  h1 {
+    font-size: 3.5rem; /* Smaller font size for mobile */
+    padding: 5px;
+  }
+
+  /* Adjust dot size and position */
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .dots {
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .home {
+    height: 250px; /* Adjust height for very small screens */
+    padding-top: 50px; /* Even less padding */
+  }
+
+  .banner-contentONE {
+    margin-top: 60px; /* Move content higher */
+  }
+
+  .banner-contentONE p {
+    font-size: 1.2rem; /* Further reduce text size */
+    left: 20px;
+    bottom: 20px; /* Adjust bottom spacing */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Make the heading smaller on very small screens */
+  }
+
+  /* Position the dots lower on the screen */
+  .dots {
+    bottom: 10px;
+  }
+}

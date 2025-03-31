@@ -1,0 +1,70 @@
+/* Default Desktop View */
+.kid-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns on desktop */
+    row-gap: 70px;
+}
+
+.kid-category h1 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.kid-category-border {
+    background-color: beige;
+    margin: 20px 170px; /* Large margins for desktop */
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+}
+
+.kid-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 70px;
+    max-height: 1000px; /* Adjust this based on your layout */
+    overflow-y: auto; /* Allows vertical scrolling */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .kid-products {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+        row-gap: 40px; /* Reduced gap */
+    }
+
+    .kid-category h1 {
+        font-size: 24px; /* Slightly smaller font for tablets */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .kid-category-border {
+        margin: 20px 50px; /* Reduced margin on tablets */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kid-products {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        row-gap: 20px; /* Smaller gap between rows */
+    }
+
+    .kid-category h1 {
+        font-size: 20px; /* Smaller font for mobile */
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .kid-category-border {
+        margin: 20px 10px; /* Small margins on mobile */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

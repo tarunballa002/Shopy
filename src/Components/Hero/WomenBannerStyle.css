@@ -1,0 +1,27 @@
+/* Default styling for the banner image */
+img {
+  width: 100%; /* Make the image take up the full width of the container */
+  height: 200px; /* Height for larger screens */
+  position: relative;
+  margin-top: 50px;
+  
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .Women-banner img {
+    height: 100%;
+    margin-top: 0%;
+    padding-top: 0%; /* Reduced height for mobile devices */
+  }
+}
+
+/* For very small mobile screens (optional) */
+@media screen and (max-width: 480px) {
+  .Women-banner img{
+    height: 100%;
+    margin-top: 0%;
+    padding-top: 0%;
+    /* Further reduced height for very small screens */
+  }
+}

@@ -1,0 +1,109 @@
+/* General footer styling */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  margin: 10px;
+  width: 250px;
+}
+
+.footer-section h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Change color to make it stand out */
+}
+
+/* Displaying list items in a row */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Display items in a row */
+  justify-content: space-between; /* Space items evenly */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-section ul li {
+  margin: 8px;
+  font-size: 14px;
+  flex: 1 1 auto; /* Allow items to grow/shrink based on available space */
+  text-align: center; /* Center text in each item */
+}
+
+.footer-section ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Footer links and hover effects */
+.footer-section ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  color: #ff6347;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px; /* Add some padding on smaller screens */
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Stack the list items vertically for small screens */
+  .footer-section ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section ul li {
+    margin: 12px 0; /* Adjust margin for vertical stacking */
+    font-size: 16px; /* Increase font size for better readability */
+  }
+
+  .footer-section h4 {
+    font-size: 20px; /* Larger header font size on mobile */
+  }
+
+  /* Optional: Modify the overall font size for mobile devices */
+  .footer {
+    font-size: 14px; /* Slightly increase font size for small screens */
+  }
+}
+
+/* Very small screens (Optional: extra customization for smaller devices) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 0; /* Reduce padding on very small screens */
+  }
+  .footer-section ul li {
+    font-size: 14px; /* Adjust font size for even smaller screens */
+  }
+
+  .footer-section h4 {
+    font-size: 18px; /* Adjust header size */
+  }
+}

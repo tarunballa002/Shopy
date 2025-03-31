@@ -1,0 +1,87 @@
+/* item.css */
+
+/* Default Desktop and Tablet View */
+.item {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: auto;
+  margin: 15px;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  padding-top: 0%;
+}
+
+.item p {
+  font-size: 16px;
+  color: #333;
+  position: relative;
+  left: 0%;
+}
+
+.item-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.item-price-new {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.item-price-old {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .item {
+      padding: 15px; /* Slightly reduced padding for tablets */
+      margin: 10px;  /* Reduced margin */
+  }
+
+  .item p {
+      font-size: 14px; /* Slightly smaller text for tablets */
+  }
+
+  .item-price-new {
+      font-size: 16px; /* Smaller price size for tablets */
+  }
+
+  .item-price-old {
+      font-size: 12px; /* Smaller old price size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+      padding: 10px; /* Further reduced padding for mobile */
+      margin: 8px;   /* Even smaller margin */
+  }
+
+  .item p {
+      font-size: 12px; /* Reduced text size for mobile */
+  }
+
+  .item-price-new {
+      font-size: 14px; /* Smaller price size for mobile */
+  }
+
+  .item-price-old {
+      font-size: 10px; /* Further reduced old price size for mobile */
+  }
+}

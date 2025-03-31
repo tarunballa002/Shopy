@@ -1,0 +1,209 @@
+/* Main Navbar Styling */
+.NavBaritems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  transition: padding 0.3s ease, background-color 0.3s ease; /* Added transition */
+}
+
+.logo {
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Added transition */
+}
+
+.logo img {
+  height: 90px;  /* Set the height of the logo */
+  width: auto;   /* Maintain aspect ratio */
+  position: relative;
+  left: 100px;
+  bottom: 20px;
+  transition: height 0.3s ease, left 0.3s ease, bottom 0.3s ease; /* Added transition for smooth resizing */
+}
+
+/* Navigation Menu (Desktop View) */
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-grow: 1;
+  transition: transform 0.3s ease; /* Added transition */
+}
+
+ul li {
+  margin: 0 20px;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Added transition for hover effect */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul li:hover {
+  text-decoration: underline;
+  color: #4CAF50; /* Change color on hover */
+}
+
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition */
+  position: relative;
+  right: 100px;
+}
+
+button:hover {
+  background-color: #4CAF50;
+}
+
+button:active {
+  background-color: #080808;
+  transform: scale(0.98);
+}
+
+/* Hamburger Menu Styling (Mobile View) */
+.hamburger {
+  display: none; /* Hide hamburger by default */
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  transition: transform 0.3s ease; /* Added transition */
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 4px;
+  background-color: black;
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Added transition */
+}
+
+.hamburger .line.open {
+  transform: rotate(45deg);
+  margin: 0;
+}
+
+.hamburger .line:nth-child(2).open {
+  opacity: 0; /* Hide the middle line */
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  body.menu-open {
+    background-color: white;
+  }
+
+  .NavBaritems {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    position: relative;
+    transition: padding 0.3s ease; /* Added transition */
+  }
+
+  ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    display: none; /* Hide menu items by default */
+    margin-top: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Added transition */
+  }
+
+  ul.active {
+    display: flex; /* Show menu items when active */
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(0); /* Ensure smooth transition */
+    opacity: 1;
+  }
+
+  ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Added transition for fading in */
+  }
+
+  ul.active li {
+    opacity: 1; /* Make items visible when menu is active */
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: rgb(20, 19, 19);
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Added transition */
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  button:active {
+    background-color: #388e3c;
+    transform: scale(0.98);
+  }
+
+  /* Logo Styling in Mobile */
+  .logo img {
+    height: 40px;  /* Set the height of the logo */
+    width: auto;   /* Maintain aspect ratio */
+    position: relative;
+    left: 0%;
+    bottom: 40px;
+    transition: height 0.3s ease, left 0.3s ease, bottom 0.3s ease; /* Smooth transition */
+  }
+
+  /* Show hamburger icon on small screens */
+  .hamburger {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  /* The login button container is hidden by default */
+  .login-btn-container {
+    display: none;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Show login button when the menu is open */
+  .login-btn-container.show {
+    display: block; /* Show the login button when the menu is active */
+    margin-top: 20px;
+    opacity: 1; /* Ensure it fades in smoothly */
+  }
+}
