@@ -63,7 +63,7 @@
     }
 
     .Men-category-border {
-         /* Small margins on mobile */
+        margin: 20px 10px; /* Small margins on mobile */
         padding-left: 10px;
         padding-right: 10px;
     }

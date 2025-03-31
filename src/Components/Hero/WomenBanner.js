@@ -1,5 +1,5 @@
 import React from 'react'
-import womenBannerImage from '../Assests/womenBannerImage.webp'
+import womenBannerImage from '../Assests/girltwo.jpg'
 import './WomenBannerStyle.css'
 
 const WomenBanner = () => {

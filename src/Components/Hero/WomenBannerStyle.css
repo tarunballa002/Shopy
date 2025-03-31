@@ -1,10 +1,10 @@
 /* Default styling for the banner image */
-img {
-  width: 100%; /* Make the image take up the full width of the container */
-  height: 200px; /* Height for larger screens */
-  position: relative;
-  margin-top: 50px;
-  
+.Women-banner img { /* Make the image take up the full width of the container */
+ /* Each banner will take 100% of the width, so only one banner is visible */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
 }
 
 /* Mobile-specific styles */
@@ -13,6 +13,7 @@ img {
     height: 100%;
     margin-top: 0%;
     padding-top: 0%; /* Reduced height for mobile devices */
+    cursor: pointer;
   }
 }
 
@@ -22,6 +23,7 @@ img {
     height: 100%;
     margin-top: 0%;
     padding-top: 0%;
+    cursor: pointer;
     /* Further reduced height for very small screens */
   }
 }

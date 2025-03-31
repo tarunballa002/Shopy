@@ -1,10 +1,10 @@
 import React from 'react'
-import Menbanner from '../Assests/Menbanner.jpg'
+import Menbanner from '../Assests/Mentwo.jpg'
 import './MenBannerStyle.css'
 const MenBanner = () => {
   return (
-    <div className='kid-banner'>
-        <img src={Menbanner} alt="kid banner" />
+    <div className='men-banner'>
+        <img src={Menbanner} alt="men banner" />
 
     </div>
   )

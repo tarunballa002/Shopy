@@ -4,6 +4,7 @@ img {
   height: auto; /* Height for larger screens */
   position: relative;
   margin-top: 50px;
+  cursor: pointer;
   
 }
 
@@ -13,6 +14,7 @@ img {
     height: 100%;
     margin-top: 0%;
     padding-top: 0%; /* Reduced height for mobile devices */
+    cursor: pointer;
   }
 }
 
@@ -22,6 +24,7 @@ img {
     height: 100%;
     margin-top: 0%;
     padding-top: 0%;
+    cursor: pointer;
     /* Further reduced height for very small screens */
   }
 }

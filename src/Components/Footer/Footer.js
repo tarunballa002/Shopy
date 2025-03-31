@@ -19,7 +19,7 @@ const Footer = () => {
           <ul>
           <Link to="/mensection"><li>Men</li></Link>
           <Link to="/women"><li>Women</li></Link>
-          <Link to="/kid"><li>Kids</li></Link>
+          <Link to="/kids"><li>Kids</li></Link>
           </ul>
         </div><div className="footer-section">
           <h4>Reach Us</h4>
